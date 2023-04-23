@@ -60,13 +60,13 @@
 
         <div>
             <x-input-label for="twitter" value="Twitter ID" />
-            <x-text-input id="twitter" name="twitter" type="text" class="mt-1 block w-full" :value="old('twitter', $user->twitter)" autocomplete="twitter" />
+            <x-text-input id="twitter" name="twitter" type="text" class="mt-1 block w-full" :value="old('twitter', $user->twitter)" placeholder="aichibigirl" autocomplete="twitter" />
             <x-input-error class="mt-2" :messages="$errors->get('twitter')" />
         </div>
 
         <div>
             <x-input-label for="instagram" value="Instagram ID" />
-            <x-text-input id="instagram" name="instagram" type="text" class="mt-1 block w-full" :value="old('instagram', $user->instagram)" autocomplete="instagram" />
+            <x-text-input id="instagram" name="instagram" type="text" class="mt-1 block w-full" :value="old('instagram', $user->instagram)" placeholder="aichibigirl" autocomplete="instagram" />
             <x-input-error class="mt-2" :messages="$errors->get('instagram')" />
         </div>
 

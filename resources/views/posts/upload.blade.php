@@ -135,8 +135,8 @@
                     @for($i = 0; $i < 10; $i++)
                         <div class="tag-input" @if($i > 0) style="display:none" @endif>
                             <x-input-label for="tag-input-{{ $i }}"
-                                           :value="$i === 0 ? 'タグ(10個まで指定できます)' : 'タグ' . ($i + 1)" />
-                            <x-text-input id="tag-input-{{ $i }}" name="tags[]" type="text" class="mt-1 block w-full" :value="old('tags.'.$i)" maxlength="20" placeholder="「猫耳」「乗り物」「メイド服」など" autocomplete="description"/>
+                                           :value="$i === 0 ? 'タグ(最大10個 入力すると自動で次のカラムが表示されます)' : 'タグ' . ($i + 1)" />
+                            <x-text-input id="tag-input-{{ $i }}" name="tags[]" type="text" class="mt-1 block w-full" :value="old('tags.'.$i)" maxlength="20" placeholder="猫耳" autocomplete="description"/>
                             <x-input-error class="mt-2" :messages="$errors->get('tags.*')" />
                         </div>
                     @endfor
