@@ -25,11 +25,17 @@
 <script>
     function prevSlide() {
         const slider = document.querySelector(".overflow-x-auto");
-        slider.scrollBy(-144, 0);
+        slider.scrollBy({
+            left: -144,
+            behavior: 'smooth'
+        });
     }
 
     function nextSlide() {
         const slider = document.querySelector(".overflow-x-auto");
-        slider.scrollBy(144, 0);
+        slider.scrollBy({
+            left: 144,
+            behavior: 'smooth'
+        });
     }
 </script>
