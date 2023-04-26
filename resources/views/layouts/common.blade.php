@@ -43,6 +43,9 @@
 
         gtag('config', 'G-T8Q2QZ2TG6');
     </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5279109052718201"
+            crossorigin="anonymous"></script>
 </head>
 <body id="@yield('body-id', '')">
 <header id="header">
