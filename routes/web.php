@@ -46,6 +46,9 @@ Route::get('/about', function() {
 Route::get('/terms', function() {
     return view('static_pages.terms');
 });
+Route::get('/model', function() {
+    return view('static_pages.model');
+});
 
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 Route::post('/search', [SearchController::class, 'search'])->name('search.search');
