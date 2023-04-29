@@ -20,21 +20,21 @@
 
             <x-card.model
                 title="Hanamix"
-                header="hanamix/header.png"
+                directory="hanamix"
                 tweet="https://twitter.com/hanabi_aiart/status/1651510252515512322"
                 downloadLink="https://huggingface.co/Hanabiaiart/Hanamix"
                 class="mb-4" />
 
             <x-card.model
                 title="COreMixPure"
-                header="coremix/header.jpeg"
+                directory="coremix"
                 tweet="https://twitter.com/core_tan/status/1647193886761324544"
                 downloadLink="https://huggingface.co/corechan/CoreMix"
                 class="mb-4" />
 
             <x-card.model
                 title="ShiratakiMix"
-                header="shiratakimix/header.jpg"
+                directory="shiratakimix"
                 tweet="https://twitter.com/Vsukiyaki_AIArt/status/1644490244207542272"
                 downloadLink="https://huggingface.co/Vsukiyaki/ShiratakiMix"
                 class="mb-4" />
