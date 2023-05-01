@@ -8,21 +8,21 @@
         <h2 class="font-bold mt-4">配布先</h2>
         <a class="underline" href="{{ $downloadLink }}">{{ $downloadLink }}</a>
 
-{{--        <h2 class="font-bold mt-4">ギャラリー(準備中)</h2>--}}
-{{--        <div class="grid grid-cols-2">--}}
-{{--            <div class="max-w-full m-2">--}}
-{{--                <img class="w-full h-auto" src="https://placehold.jp/150x150.png" />--}}
-{{--            </div>--}}
-{{--            <div class="max-w-full m-2">--}}
-{{--                <img class="w-full h-auto" src="https://placehold.jp/150x150.png" />--}}
-{{--            </div>--}}
-{{--            <div class="max-w-full m-2">--}}
-{{--                <img class="w-full h-auto" src="https://placehold.jp/150x150.png" />--}}
-{{--            </div>--}}
-{{--            <div class="max-w-full m-2">--}}
-{{--                <img class="w-full h-auto" src="https://placehold.jp/150x150.png" />--}}
-{{--            </div>--}}
-{{--        </div>--}}
+        <h2 class="font-bold mt-4">ギャラリー</h2>
+        <div class="grid grid-cols-2">
+            <div class="max-w-full m-2">
+                <img class="w-full h-auto" src="images/model/{{ $directory }}/1.webp" />
+            </div>
+            <div class="max-w-full m-2">
+                <img class="w-full h-auto" src="images/model/{{ $directory }}/2.webp" />
+            </div>
+            <div class="max-w-full m-2">
+                <img class="w-full h-auto" src="images/model/{{ $directory }}/3.webp" />
+            </div>
+            <div class="max-w-full m-2">
+                <img class="w-full h-auto" src="images/model/{{ $directory }}/4.webp" />
+            </div>
+        </div>
     </div>
 
     <div class="m-auto w-full">
