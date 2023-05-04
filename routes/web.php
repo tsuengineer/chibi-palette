@@ -49,6 +49,9 @@ Route::get('/terms', function() {
 Route::get('/model', function() {
     return view('static_pages.model');
 });
+Route::get('/license', function() {
+    return view('static_pages.license');
+});
 
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 Route::post('/search', [SearchController::class, 'search'])->name('search.search');

@@ -25,6 +25,11 @@
                             モデル紹介
                         </a>
                     </li>
+                    <li>
+                        <a href="/license">
+                            免許証作成
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
