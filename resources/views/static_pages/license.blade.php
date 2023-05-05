@@ -163,7 +163,7 @@
     </div>
   </div>
 
-  <script src="../js/createLicenseSvg.js"></script>
+  <script src="../js/createLicenseSvg.js?202205052000"></script>
   <script>
     // 初回表示時
     createLicenseSvg();
