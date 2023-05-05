@@ -69,9 +69,9 @@
           <x-text-input id="name" name="name" type="text" class="mt-1 mb-8 block" value="ちびパレ" placeholder="ちびパレ" maxlength="100" />
 
           <x-input-label for="birth" value="生年月日" />
-          <x-text-input id="birthYear" name="birthYear" type="text" class="mt-1 w-24" value="平成10" placeholder="平成10" maxlength="4" /> 年
-          <x-text-input id="birthMonth" name="birthMonth" type="text" class="mt-1 w-24" value="12" placeholder="12" maxlength="2" /> 月
-          <x-text-input id="birthDay" name="birthDay" type="text" class="mt-1 w-24" value="01" placeholder="01" maxlength="2" /> 日
+          <x-text-input id="birthYear" name="birthYear" type="text" class="mt-1 w-24" value="令和05" placeholder="令和05" maxlength="4" /> 年
+          <x-text-input id="birthMonth" name="birthMonth" type="text" class="mt-1 w-24" value="04" placeholder="04" maxlength="2" /> 月
+          <x-text-input id="birthDay" name="birthDay" type="text" class="mt-1 w-24" value="23" placeholder="23" maxlength="2" /> 日
         </div>
 
         <div id="addressTabContent" class="tab-content m-2 hidden">
@@ -79,15 +79,15 @@
           <x-text-input id="address" name="address" type="text" class="mt-1 mb-8 block w-96" value="東京都新宿区西新宿2-8-1" placeholder="東京都新宿区西新宿2-8-1" maxlength="100" />
 
           <x-input-label for="issueYmd" value="交付年月日" />
-          <x-text-input id="issueYear" name="issueYear" type="text" class="mt-1 mb-8 w-24" value="令和02" placeholder="令和02" maxlength="4" /> 年
-          <x-text-input id="issueMonth" name="issueMonth" type="text" class="mt-1 mb-8 w-24" value="10" placeholder="10" maxlength="4" /> 月
-          <x-text-input id="issueDay" name="issueDay" type="text" class="mt-1 mb-8 w-24" value="01" placeholder="01" maxlength="4" /> 日
+          <x-text-input id="issueYear" name="issueYear" type="text" class="mt-1 mb-8 w-24" value="令和05" placeholder="令和05" maxlength="4" /> 年
+          <x-text-input id="issueMonth" name="issueMonth" type="text" class="mt-1 mb-8 w-24" value="05" placeholder="05" maxlength="4" /> 月
+          <x-text-input id="issueDay" name="issueDay" type="text" class="mt-1 mb-8 w-24" value="04" placeholder="04" maxlength="4" /> 日
 
           <x-input-label for="issueNumber" value="交付番号" />
           <x-text-input id="issueNumber" name="issueNumber" type="text" class="mt-1 mb-8 w-24" value="12345" placeholder="12345" maxlength="20" />
 
           <x-input-label for="expirationDate" value="期限の文言" />
-          <x-text-input id="expirationDate" name="expirationDate" type="text" class="mt-1 mb-8 w-96" value="2025年(令和07年)10月01日まで有効" placeholder="2025年(令和07年)10月01日まで有効" maxlength="30" />
+          <x-text-input id="expirationDate" name="expirationDate" type="text" class="mt-1 mb-8 w-96" value="2025年(令和07年)05月04日まで有効" placeholder="2025年(令和07年)10月01日まで有効" maxlength="30" />
 
           <x-input-label for="licenseColor" value="免許の色" />
           <input type="radio" id="gold" name="licenseColor" value="#b29e59" checked>
@@ -103,10 +103,10 @@
 
         <div id="conditionsTabContent" class="tab-content m-2 hidden">
           <x-input-label for="licenseConditions" value="免許の条件" />
-          <x-text-input id="licenseConditions1" name="licenseConditions1" type="text" class="mt-1 w-96 block" value="中型車は中型車(8t)に限る" placeholder="中型車は中型車(8t)に限る" maxlength="30" />
-          <x-text-input id="licenseConditions2" name="licenseConditions2" type="text" class="mt-1 w-96 block" value="中型車(8t)と普通車はAT車に限る" placeholder="中型車(8t)と普通車はAT車に限る" maxlength="30" />
-          <x-text-input id="licenseConditions3" name="licenseConditions3" type="text" class="mt-1 w-96 block" value="大型車は自衛隊用自動車に限る" placeholder="大型車は自衛隊用自動車に限る" maxlength="30" />
-          <x-text-input id="licenseConditions4" name="licenseConditions4" type="text" class="mt-1 w-96 block" value="眼鏡等" placeholder="眼鏡等" maxlength="30" />
+          <x-text-input id="licenseConditions1" name="licenseConditions1" type="text" class="mt-1 w-96 block" value="小型車はお買い物カートに限る" placeholder="中型車は中型車(8t)に限る" maxlength="30" />
+          <x-text-input id="licenseConditions2" name="licenseConditions2" type="text" class="mt-1 w-96 block" value="" placeholder="中型車(8t)と普通車はAT車に限る" maxlength="30" />
+          <x-text-input id="licenseConditions3" name="licenseConditions3" type="text" class="mt-1 w-96 block" value="" placeholder="大型車は自衛隊用自動車に限る" maxlength="30" />
+          <x-text-input id="licenseConditions4" name="licenseConditions4" type="text" class="mt-1 w-96 block" value="" placeholder="眼鏡等" maxlength="30" />
         </div>
 
         <div id="licenseDateTabContent" class="tab-content m-2 hidden">
@@ -127,8 +127,12 @@
         </div>
 
         <div id="otherTabContent" class="tab-content m-2 hidden">
-          <x-input-label for="pref" value="都道府県" />
-          <x-text-input id="pref" name="pref" type="text" class="mt-1 w-32" value="東京都" placeholder="東京都" maxlength="30" />
+          <x-input-label for="organization" value="組織名" />
+          <x-text-input id="org1" name="org1" type="text" class="mt-1 w-32" value="イラス都" placeholder="イラス都" maxlength="30" />
+          <x-text-input id="org2" name="org2" type="text" class="mt-1 mb-8 w-32" value="公安委員会" placeholder="公安委員会" maxlength="30" />
+
+          <x-input-label for="licenseName" value="免許の名前" />
+          <x-text-input id="licenseName" name="licenseName" type="text" class="mt-1 w-32" value="イラスト免許証" placeholder="イラスト免許証" maxlength="30" />
         </div>
 
         <div id="licenseKindTabContent" class="tab-content m-2 hidden">

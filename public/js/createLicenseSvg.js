@@ -87,9 +87,11 @@ const init = () => {
     secondClassLicenseYear: getValue('secondClassLicenseYear'),
     secondClassLicenseMonth: getValue('secondClassLicenseMonth'),
     secondClassLicenseDay: getValue('secondClassLicenseDay'),
-    pref: getValue('pref'),
+    org1: getValue('org1'),
+    org2: getValue('org2'),
     licenseColor: selectedLicenseColor,
     licenseKinds: licenseKinds,
+    licenseName: getValue('licenseName'),
   }
 }
 
@@ -193,15 +195,15 @@ function drawFixedText() {
   text(240, 485, '月', '16px', '#000');
   text(290, 485, '日', '16px', '#000');
 
-  text(620, 495, '公安委員会', '16px', '#e62');
-
   text(323.75, 430, '種類', '16px', '#000', true, 16);
-  text(555, 220, '運転免許証', '22px', '#2af', true, 24);
 
   text(520, 525, 'ちびキャラパレット https://chibipalette.com', '12px', '#000');
 }
 
 function drawVariableText(params) {
+  // 免許証の名前
+  text(555, 200, params.licenseName, '22px', '#2af', true, 10);
+
   // 氏名
   text(120, 50, params.name, '20px', '#000');
 
@@ -339,8 +341,9 @@ function drawVariableText(params) {
     text(512, 475, '-', '22px', '#000', false);
   }
 
-  // 都道府県
-  text(600, 470, params.pref, '16px', '#e62');
+  // 組織
+  text(600, 470, params.org1, '16px', '#e62');
+  text(620, 495, params.org2, '16px', '#e62');
 }
 
 function setPicture() {
