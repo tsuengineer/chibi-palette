@@ -1,7 +1,7 @@
 @extends('layouts.common')
 @include('layouts.header')
 @section('title')
-    免許証作成｜{{ config('app.name') }}
+    免許証ジェネレータ｜{{ config('app.name') }}
 @endsection
 
 @section('content')
@@ -15,14 +15,14 @@
       @php
           $breadcrumbs = [
               ['name' => 'トップ', 'url' => '/'],
-              ['name' => '免許証作成', 'url' => ''],
+              ['name' => '免許証ジェネレータ', 'url' => ''],
           ];
       @endphp
       <div class="px-2 pb-8">
           <x-navigation.breadcrumbs :breadcrumbs="$breadcrumbs"></x-navigation.breadcrumbs>
       </div>
 
-      <h1 class="px-2 font-bold">免許証作成</h1>
+      <h1 class="px-2 font-bold">免許証ジェネレータ</h1>
 
       <h2 class="px-2 font-bold mt-2">使い方</h2>
       <p class="px-2">初期値が設定されています。<br>値を変更して「変更を反映」ボタンを押してください。<br>作成した画像は「画像を保存」ボタンを押すことで保存できます。</p>
@@ -66,12 +66,10 @@
       <form>
         <div id="userTabContent" class="tab-content m-2 hidden">
           <x-input-label for="name" value="氏名" />
-          <x-text-input id="name" name="name" type="text" class="mt-1 mb-8 block" value="ちびパレ" placeholder="ちびパレ" maxlength="100" />
+          <x-text-input id="name" name="name" type="text" class="mt-1 mb-8 block w-96" value="ちびパレ" placeholder="ちびパレ" maxlength="100" />
 
           <x-input-label for="birth" value="生年月日" />
-          <x-text-input id="birthYear" name="birthYear" type="text" class="mt-1 w-24" value="令和05" placeholder="令和05" maxlength="4" /> 年
-          <x-text-input id="birthMonth" name="birthMonth" type="text" class="mt-1 w-24" value="04" placeholder="04" maxlength="2" /> 月
-          <x-text-input id="birthDay" name="birthDay" type="text" class="mt-1 w-24" value="23" placeholder="23" maxlength="2" /> 日
+          <x-text-input id="birthDay" name="birthDay" type="text" class="mt-1 w-24 w-96" value="令和05 年  05 月  23 日生" placeholder="令和05 年  05 月  23 日生" maxlength="30" />
         </div>
 
         <div id="addressTabContent" class="tab-content m-2 hidden">
@@ -79,12 +77,10 @@
           <x-text-input id="address" name="address" type="text" class="mt-1 mb-8 block w-96" value="東京都新宿区西新宿2-8-1" placeholder="東京都新宿区西新宿2-8-1" maxlength="100" />
 
           <x-input-label for="issueYmd" value="交付年月日" />
-          <x-text-input id="issueYear" name="issueYear" type="text" class="mt-1 mb-8 w-24" value="令和05" placeholder="令和05" maxlength="4" /> 年
-          <x-text-input id="issueMonth" name="issueMonth" type="text" class="mt-1 mb-8 w-24" value="05" placeholder="05" maxlength="4" /> 月
-          <x-text-input id="issueDay" name="issueDay" type="text" class="mt-1 mb-8 w-24" value="04" placeholder="04" maxlength="4" /> 日
+          <x-text-input id="issueDay" name="issueDay" type="text" class="mt-1 mb-8 w-24 w-96" value="令和05 年  05 月  04 日" placeholder="令和05 年  05 月  04 日" maxlength="30" />
 
           <x-input-label for="issueNumber" value="交付番号" />
-          <x-text-input id="issueNumber" name="issueNumber" type="text" class="mt-1 mb-8 w-24" value="12345" placeholder="12345" maxlength="20" />
+          <x-text-input id="issueNumber" name="issueNumber" type="text" class="mt-1 mb-8 w-24 w-96" value="12345" placeholder="12345" maxlength="20" />
 
           <x-input-label for="expirationDate" value="期限の文言" />
           <x-text-input id="expirationDate" name="expirationDate" type="text" class="mt-1 mb-8 w-96" value="2025年(令和07年)05月04日まで有効" placeholder="2025年(令和07年)10月01日まで有効" maxlength="30" />
@@ -98,7 +94,7 @@
           <label for="green">緑</label><br>
 
           <x-input-label for="licenseNumber" value="免許番号" class="mt-8" />
-          <x-text-input id="licenseNumber" name="licenseNumber" type="text" class="mt-1" value="123456789012" placeholder="123456789012" maxlength="20" />
+          <x-text-input id="licenseNumber" name="licenseNumber" type="text" class="mt-1 w-96" value="123456789012" placeholder="123456789012" maxlength="20" />
         </div>
 
         <div id="conditionsTabContent" class="tab-content m-2 hidden">
@@ -110,20 +106,14 @@
         </div>
 
         <div id="licenseDateTabContent" class="tab-content m-2 hidden">
-          <x-input-label for="bikeLicenseYmd" value="二・小・原 取得年月日" />
-          <x-text-input id="bikeLicenseYear" name="bikeLicenseYear" type="text" class="mt-1 w-24" value="令和00" placeholder="令和00" maxlength="4" /> 年
-          <x-text-input id="bikeLicenseMonth" name="bikeLicenseMonth" type="text" class="mt-1 w-24" value="00" placeholder="00" maxlength="2" /> 月
-          <x-text-input id="bikeLicenseDay" name="bikeLicenseDay" type="text" class="mt-1 w-24" value="00" placeholder="00" maxlength="2" /> 日
+          <x-input-label for="bikeLicenseDay" value="二・小・原 取得年月日" />
+          <x-text-input id="bikeLicenseDay" name="bikeLicenseDay" type="text" class="mt-1 w-96" value="令和00年 00月 00日" placeholder="令和00年 00月 00日" maxlength="30" />
 
-          <x-input-label for="otherLicenseYmd" value="他 取得年月日" class="mt-8" />
-          <x-text-input id="otherLicenseYear" name="otherLicenseYear" type="text" class="mt-1 w-24" value="令和00" placeholder="令和00" maxlength="4" /> 年
-          <x-text-input id="otherLicenseMonth" name="otherLicenseMonth" type="text" class="mt-1 w-24" value="00" placeholder="00" maxlength="2" /> 月
-          <x-text-input id="otherLicenseDay" name="otherLicenseDay" type="text" class="mt-1 w-24" value="00" placeholder="00" maxlength="2" /> 日
+          <x-input-label for="otherLicenseDay" value="他 取得年月日" class="mt-8" />
+          <x-text-input id="otherLicenseDay" name="otherLicenseDay" type="text" class="mt-1 w-96" value="令和00年 00月 00日" placeholder="令和00年 00月 00日" maxlength="30" />
 
-          <x-input-label for="secondClassLicenseYmd" value="二種 取得年月日" class="mt-8" />
-          <x-text-input id="secondClassLicenseYear" name="secondClassLicenseYear" type="text" class="mt-1 w-24" value="令和00" placeholder="令和00" maxlength="4" /> 年
-          <x-text-input id="secondClassLicenseMonth" name="secondClassLicenseMonth" type="text" class="mt-1 w-24" value="00" placeholder="00" maxlength="2" /> 月
-          <x-text-input id="secondClassLicenseDay" name="secondClassLicenseDay" type="text" class="mt-1 w-24" value="00" placeholder="00" maxlength="2" /> 日
+          <x-input-label for="secondClassLicenseDay" value="二種 取得年月日" class="mt-8" />
+          <x-text-input id="secondClassLicenseDay" name="secondClassLicenseDay" type="text" class="mt-1 w-96" value="令和00年 00月 00日" placeholder="令和00年 00月 00日" maxlength="30" />
         </div>
 
         <div id="otherTabContent" class="tab-content m-2 hidden">

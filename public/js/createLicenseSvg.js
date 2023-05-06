@@ -64,12 +64,8 @@ const init = () => {
 
   return {
     name: getValue('name'),
-    birthYear: getValue('birthYear'),
-    birthMonth: getValue('birthMonth'),
     birthDay: getValue('birthDay'),
     address: getValue('address'),
-    issueYear: getValue('issueYear'),
-    issueMonth: getValue('issueMonth'),
     issueDay: getValue('issueDay'),
     issueNumber: getValue('issueNumber'),
     expirationDate: getValue('expirationDate'),
@@ -78,14 +74,8 @@ const init = () => {
     licenseConditions3: getValue('licenseConditions3'),
     licenseConditions4: getValue('licenseConditions4'),
     licenseNumber: getValue('licenseNumber'),
-    bikeLicenseYear: getValue('bikeLicenseYear'),
-    bikeLicenseMonth: getValue('bikeLicenseMonth'),
     bikeLicenseDay: getValue('bikeLicenseDay'),
-    otherLicenseYear: getValue('otherLicenseYear'),
-    otherLicenseMonth: getValue('otherLicenseMonth'),
     otherLicenseDay: getValue('otherLicenseDay'),
-    secondClassLicenseYear: getValue('secondClassLicenseYear'),
-    secondClassLicenseMonth: getValue('secondClassLicenseMonth'),
     secondClassLicenseDay: getValue('secondClassLicenseDay'),
     org1: getValue('org1'),
     org2: getValue('org2'),
@@ -163,15 +153,9 @@ function drawLines() {
 
 function drawFixedText() {
   text(50, 50, '氏名', '16px', '#000', false, 1.5);
-  text(635, 50, '年', '16px', '#000');
-  text(705, 50, '月', '16px', '#000');
-  text(770, 50, '日生', '16px', '#000', false, 1.5);
 
   text(50, 130, '住所', '16px', '#000');
   text(50, 170, '交付', '16px', '#000');
-  text(220, 170, '年', '16px', '#000');
-  text(290, 170, '月', '16px', '#000');
-  text(360, 170, '日', '16px', '#000');
 
   text(50, 255, '免許の', '14px', '#000');
   text(50, 280, '条件等', '14px', '#000');
@@ -181,19 +165,8 @@ function drawFixedText() {
   text(440, 390, '号', '16px', '#000');
 
   text(32.5, 425, '二･小･原', '16px', '#000');
-  text(185, 425, '年', '16px', '#000');
-  text(240, 425, '月', '16px', '#000');
-  text(290, 425, '日', '16px', '#000');
-
   text(55, 455, '他', '16px', '#000');
-  text(185, 455, '年', '16px', '#000');
-  text(240, 455, '月', '16px', '#000');
-  text(290, 455, '日', '16px', '#000');
-
   text(45, 490, '二 種', '16px', '#000');
-  text(185, 485, '年', '16px', '#000');
-  text(240, 485, '月', '16px', '#000');
-  text(290, 485, '日', '16px', '#000');
 
   text(323.75, 430, '種類', '16px', '#000', true, 16);
 
@@ -208,9 +181,7 @@ function drawVariableText(params) {
   text(120, 50, params.name, '20px', '#000');
 
   // 生年月日
-  text(565, 50, params.birthYear, '18px', '#000');
-  text(675, 50, params.birthMonth, '18px', '#000');
-  text(740, 50, params.birthDay, '18px', '#000');
+  text(570, 50, params.birthDay, '18px', '#000');
 
   // 住所
   text(120, 130, params.address, '22px', '#000');
@@ -219,12 +190,10 @@ function drawVariableText(params) {
   text(50, 213, params.expirationDate, '24px', '#000');
 
   // 交付年月日
-  text(150, 170, params.issueYear, '20px', '#000');
-  text(255, 170, params.issueMonth, '20px', '#000');
-  text(325, 170, params.issueDay, '20px', '#000');
+  text(160, 170, params.issueDay, '20px', '#000');
 
   // 交付番号
-  text(420, 170, params.issueNumber, '20px', '#000');
+  text(410, 170, params.issueNumber, '20px', '#000');
 
   // 免許の条件
   text(140, 255, params.licenseConditions1, '20px', '#000');
@@ -241,20 +210,10 @@ function drawVariableText(params) {
   // 免許番号
   text(180, 390, params.licenseNumber, '24px', '#000', false, 3);
 
-  // 二小原
-  text(115, 425, params.bikeLicenseYear, '18px', '#000');
-  text(210, 425, params.bikeLicenseMonth, '18px', '#000');
-  text(260, 425, params.bikeLicenseDay, '18px', '#000');
-
-  // 他
-  text(115, 455, params.otherLicenseYear, '18px', '#000');
-  text(210, 455, params.otherLicenseMonth, '18px', '#000');
-  text(260, 455, params.otherLicenseDay, '18px', '#000');
-
-  // 二種
-  text(115, 485, params.secondClassLicenseYear, '18px', '#000');
-  text(210, 485, params.secondClassLicenseMonth, '18px', '#000');
-  text(260, 485, params.secondClassLicenseDay, '18px', '#000');
+  // 取得日
+  text(115, 425, params.bikeLicenseDay, '18px', '#000');
+  text(115, 455, params.otherLicenseDay, '18px', '#000');
+  text(115, 485, params.secondClassLicenseDay, '18px', '#000');
 
   // 種類
   if (params.licenseKinds.some((element) => element.id === 1)) {
