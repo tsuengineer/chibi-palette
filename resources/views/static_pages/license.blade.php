@@ -38,23 +38,23 @@
       </div>
 
       <div class="flex">
-        <div class="p-2 m-2 w-32 bg-gray-900 hover:bg-gray-400 text-white text-center rounded-lg shadow-lg">
+        <div class="py-2 m-2 w-32 bg-gray-900 hover:bg-gray-400 text-white text-center text-sm sm:text-base rounded-lg shadow-lg">
           <button id="generate" type="button" onclick="createLicenseSvg();">変更を反映</button>
         </div>
 
-        <div class="p-2 m-2 w-32 bg-gray-900 hover:bg-gray-400 text-white text-center rounded-lg shadow-lg">
+        <div class="py-2 m-2 w-32 bg-gray-900 hover:bg-gray-400 text-white text-center text-sm sm:text-base rounded-lg shadow-lg">
           <button onclick="downloadSvg(this);">画像を保存</button>
         </div>
 
-        <div class="flex items-center justify-center rounded-lg shadow-lg py-2 px-4 m-2 text-sm text-white bg-blue-500 hover:bg-blue-400">
-          <a href="https://twitter.com/intent/tweet?text=ちびキャラパレットで免許証を作成しました。&amp;url=https://chibipalette.com/license" rel="nofollow noopener" target="_blank">
-            <i class="fa-brands fa-twitter pr-2"></i>ツイートする
+        <div class="flex items-center justify-center rounded-lg shadow-lg py-2 px-4 m-2  text-sm sm:text-base text-white bg-blue-500 hover:bg-blue-400">
+          <a class="whitespace-nowrap" href="https://twitter.com/intent/tweet?text=ちびキャラパレットで免許証を作成しました。&amp;url=https://chibipalette.com/license" rel="nofollow noopener" target="_blank">
+            <i class="fa-brands fa-twitter pr-2"></i>ツイート
           </a>
         </div>
       </div>
 
       <div class="flex justify-between w-full mx-2 my-8 text-xs sm:text-sm md:text-base  text-center">
-        <div id="pictureTab" class="tab py-2 w-full border-b-2 border-gray-900">写真</div>  
+        <div id="pictureTab" class="tab py-2 w-full border-b-2 border-gray-900">写真</div>
         <div id="userTab" class="tab py-2 w-full border-b-2 border-gray-300">ユーザー</div>
         <div id="addressTab" class="tab py-2 w-full border-b-2 border-gray-300">住所/交付</div>
         <div id="conditionsTab" class="tab py-2 w-full border-b-2 border-gray-300">条件</div>
