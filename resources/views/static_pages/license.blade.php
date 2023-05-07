@@ -63,7 +63,7 @@
         <div id="otherTab" class="tab py-2 w-full border-b-2 border-gray-300">その他</div>
       </div>
 
-      <form>
+      <form class="mb-8">
         <div id="userTabContent" class="tab-content m-2 hidden">
           <x-input-label for="name" value="氏名" />
           <x-text-input id="name" name="name" type="text" class="mt-1 mb-8 block w-96" value="ちびパレ" placeholder="ちびパレ" maxlength="100" />
@@ -153,7 +153,7 @@
     </div>
   </div>
 
-  <script src="../js/createLicenseSvg.js?202205052000"></script>
+  <script src="../js/createLicenseSvg.js?202205071200"></script>
   <script>
     // 初回表示時
     createLicenseSvg();
