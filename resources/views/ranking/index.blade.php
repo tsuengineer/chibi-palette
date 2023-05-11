@@ -19,7 +19,7 @@
 
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <h1 class="font-bold px-2">ランキング</h1>
-                <p class="px-2 text-sm">※1時間ごとに更新</p>
+                <p class="px-2 text-sm">※毎日00:00に更新</p>
                 <ul class="flex my-8 mx-2" id="rankingTabs">
                     <li id="weeklyButton" class="">
                         <button class="nav-link block py-2 px-8" id="daily-tab">
