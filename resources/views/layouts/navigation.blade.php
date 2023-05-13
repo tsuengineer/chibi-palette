@@ -99,6 +99,9 @@
                 <x-responsive-nav-link :href="route('ranking.index')" :active="request()->routeIs('ranking.index')">
                     ランキング
                 </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('model')" :active="request()->routeIs('model')">
+                    モデル紹介
+                </x-responsive-nav-link>
             @else
                 <x-responsive-nav-link :href="route('top.index')" :active="request()->routeIs('top.index')">
                     トップ
@@ -108,6 +111,9 @@
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('ranking.index')" :active="request()->routeIs('ranking.index')">
                     ランキング
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('model')" :active="request()->routeIs('model')">
+                    モデル紹介
                 </x-responsive-nav-link>
             @endauth
         </div>

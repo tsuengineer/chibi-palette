@@ -42,16 +42,19 @@ Route::get('/users/{userSlug}', [ProfileController::class, 'show'])->name('profi
 
 Route::get('/about', function() {
     return view('static_pages.about');
-});
+})->name('about');
 Route::get('/terms', function() {
     return view('static_pages.terms');
-});
+})->name('terms');
+Route::get('/introduction', function() {
+    return view('static_pages.introduction');
+})->name('introduction');
 Route::get('/model', function() {
     return view('static_pages.model');
-});
+})->name('model');
 Route::get('/license', function() {
     return view('static_pages.license');
-});
+})->name('license');
 
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 Route::post('/search', [SearchController::class, 'search'])->name('search.search');
