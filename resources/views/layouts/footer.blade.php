@@ -21,6 +21,16 @@
                 </ul>
                 <ul class="ml-8">
                     <li>
+                        <a href="/introduction">
+                            SD導入方法
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/add-model">
+                            モデル追加方法
+                        </a>
+                    </li>
+                    <li>
                         <a href="/model">
                             モデル紹介
                         </a>

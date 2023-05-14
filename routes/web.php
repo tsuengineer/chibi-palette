@@ -49,6 +49,9 @@ Route::get('/terms', function() {
 Route::get('/introduction', function() {
     return view('static_pages.introduction');
 })->name('introduction');
+Route::get('/add-model', function() {
+    return view('static_pages.add_model');
+})->name('add_model');
 Route::get('/model', function() {
     return view('static_pages.model');
 })->name('model');

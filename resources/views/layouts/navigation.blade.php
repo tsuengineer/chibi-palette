@@ -99,8 +99,17 @@
                 <x-responsive-nav-link :href="route('ranking.index')" :active="request()->routeIs('ranking.index')">
                     ランキング
                 </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('introduction')" :active="request()->routeIs('introduction')">
+                    Stable Diffusion WebUI 導入方法
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('add_model')" :active="request()->routeIs('add_model')">
+                    モデル追加方法
+                </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('model')" :active="request()->routeIs('model')">
                     モデル紹介
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('license')" :active="request()->routeIs('license')">
+                    免許証ジェネレータ
                 </x-responsive-nav-link>
             @else
                 <x-responsive-nav-link :href="route('top.index')" :active="request()->routeIs('top.index')">
@@ -112,8 +121,17 @@
                 <x-responsive-nav-link :href="route('ranking.index')" :active="request()->routeIs('ranking.index')">
                     ランキング
                 </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('introduction')" :active="request()->routeIs('introduction')">
+                    Stable Diffusion WebUI 導入方法
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('add_model')" :active="request()->routeIs('add_model')">
+                    モデル追加方法
+                </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('model')" :active="request()->routeIs('model')">
                     モデル紹介
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('license')" :active="request()->routeIs('license')">
+                    免許証ジェネレータ
                 </x-responsive-nav-link>
             @endauth
         </div>

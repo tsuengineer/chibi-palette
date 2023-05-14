@@ -20,7 +20,8 @@
             <h1 class="px-2 mb-2 font-bold text-lg">Stable Diffusion WebUI の導入方法</h1>
             <div class="p-2">
                 <p class="pb-2">
-                    「Stable Diffusion automatic1111 WebUI」というUIを使います。<br>
+                    自分のPCでAIイラストを生成するための環境を構築する方法を紹介します。<br>
+                    「Stable Diffusion automatic1111 WebUI」というUIを使います。
                 </p>
                 <x-text.aside type="warning" class="mb-8 mx-2 sm:mx-0">
                     この記事はWindows11で作業することを前提としています
@@ -31,8 +32,8 @@
                 <p class="pb-8">
                     1. Pythonをインストール<br>
                     2. Gitをインストール<br>
-                    3. SD WebUIをインストール<br>
-                    4. SD WebUIを使ってみる<br>
+                    3. Stable Diffusion WebUIをインストール<br>
+                    4. Stable Diffusion WebUIを使ってみる<br>
                     5. おわりに
                 </p>
 
@@ -47,8 +48,9 @@
                     >
                         Python 3.10.9
                     </a>
-                    を開き、ページ下部にあるインストーラーをダウンロードします。<br>
-                    「Windows installer (64-bit)」 をクリックします。
+                    を開いてください。<br>
+                    ページ下部にインストーラーがあります。<br>
+                    「Windows installer (64-bit)」 をクリックしてダウンロードします。
                 </p>
                 <img src="/images/introduction/python1.webp" class="mb-8" />
 
@@ -84,14 +86,14 @@
                     >
                         Git - Downloads
                     </a>
-                    からインストーラーをダウンロードします。<br>
+                    を開いてください。<br>
                     まず「Windows」をクリックします。
                 </p>
 
                 <img src="/images/introduction/git1.webp" class="mb-8" />
 
                 <p class="pb-2">
-                    次に「64-bit Git for Windows Setup.」をクリックします。
+                    次に「64-bit Git for Windows Setup.」をクリックしてインストーラーをダウンロードします。
                 </p>
                 <img src="/images/introduction/git2.webp" class="mb-8" />
 
@@ -116,11 +118,11 @@
                 </p>
                 <img src="/images/introduction/git6.webp" class="mb-8" />
 
-                <h2 class="mb-4 font-bold text-lg border-b">3. SD WebUIをインストール</h2>
+                <h2 class="mb-4 font-bold text-lg border-b">3. Stable Diffusion WebUIをインストール</h2>
                 <h3 class="font-bold mb-2">3.1. Git Bashを起動する</h3>
                 <p class="pb-2">
-                    SD WebUIをインストールしたいディレクトリを開きます。<br>
-                    (※この例では、Cドライブ直下にAIというディレクトリを作成しています。)<br>
+                    Stable Diffusion WebUIをインストールしたいフォルダを開きます。<br>
+                    (※この例では、Cドライブ直下にAIというフォルダを作成しています。)<br>
                     右クリックから「その他のオプションを表示」をクリックし、「Git Bash Here」をクリックします。
                 </p>
                 <img src="/images/introduction/webui1.webp" class="mb-8" />
@@ -146,14 +148,14 @@
                 <img src="/images/introduction/webui5.webp" class="mb-8" />
 
                 <p class="pb-2">
-                    stable-diffusion-webui-directml というディレクトリが作成されていれば成功です。
+                    stable-diffusion-webui-directml というフォルダが作成されていれば成功です。
                 </p>
                 <img src="/images/introduction/webui6.webp" class="mb-8" />
 
-                <h2 class="mb-4 font-bold text-lg border-b">4. SD WebUIを使ってみる</h2>
-                <h3 class="font-bold mb-2">4.1. SD WebUIを起動する</h3>
+                <h2 class="mb-4 font-bold text-lg border-b">4. Stable Diffusion WebUIを使ってみる</h2>
+                <h3 class="font-bold mb-2">4.1. Stable Diffusion WebUIを起動する</h3>
                 <p class="pb-2">
-                    stable-diffusion-webui-directml ディレクトリを開いて、「webui-user.bat」をダブルクリックして起動します。
+                    stable-diffusion-webui-directml フォルダを開いて、「webui-user.bat」をダブルクリックして起動します。
                 </p>
                 <img src="/images/introduction/start1.webp" class="mb-8" />
 
@@ -183,7 +185,7 @@
                 <p class="pb-2">
                     画像を生成できるようになりましたが、アニメキャラのようなちびキャラは作れません。<br>
                     アニメキャラのような画風のイラストを生成するには、そのようなイラストを学習したモデルをインストールする必要があります。<br>
-                    モデルのインストール方法は次の記事で解説します。
+                    モデルのインストール方法は<a href="/add-model" class="underline">Stable Diffusion WebUI にモデルを追加する方法</a>で解説しています。
                 </p>
             </div>
         </div>
