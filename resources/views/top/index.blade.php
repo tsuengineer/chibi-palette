@@ -1,6 +1,7 @@
 @extends('layouts.common')
 @include('layouts.header')
 @section('title')トップページ ｜{{ config('app.name') }}@endsection
+@section('ogPath'){{ 'images/ogp/main.webp' }}@endsection
 
 @section('content')
     <div class="pt-4 pb-12">
