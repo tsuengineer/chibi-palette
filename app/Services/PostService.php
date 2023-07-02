@@ -81,14 +81,14 @@ class PostService
             $this->resizeImage($image, 800, 800);
         }
 
-        if (!Storage::disk('direct')->put('images/post/' . $directory . '/main/' . $filename, (string) $image->encode('webp'))) {
+        if (!Storage::disk('direct')->put('images/post/' . $directory . '/main/' . $filename, (string) $image->encode('webp', 100))) {
             Log::error('Failed to save main image.', ['image' => $image]);
             return ResponseUtil::createWithErrors(['image' => 'Failed to upload file.']);
         }
 
         // サムネイル画像
         $image->fit(300, 300);
-        if (!Storage::disk('direct')->put('images/post/' . $directory . '/thumbnail/' . $filename, (string) $image->encode('webp'))) {
+        if (!Storage::disk('direct')->put('images/post/' . $directory . '/thumbnail/' . $filename, (string) $image->encode('webp', 100))) {
             Log::error('Failed to save thumbnail.', ['image' => $image]);
             return ResponseUtil::createWithErrors(['image' => 'Failed to upload file.']);
         }

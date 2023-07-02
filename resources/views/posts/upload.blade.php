@@ -218,9 +218,9 @@
         // ファイルサイズチェック
         function checkFileSize() {
             const fileInput = document.getElementById('inputImage');
-            if (fileInput.files[0].size > 1024 * 1024 * 10) {
+            if (fileInput.files[0].size > 1000 * 1000 * 50) {
                 console.log(fileInput.files[0].size)
-                alert('ファイルサイズが10MBを超えています。');
+                alert('ファイルサイズが50MBを超えています。');
                 fileInput.value = '';
                 return false;
             }

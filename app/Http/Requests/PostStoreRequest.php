@@ -94,7 +94,7 @@ class PostStoreRequest extends FormRequest
             'image' => [
                 'image',
                 'mimes:jpeg,png,jpg,gif',
-                'max:10240',
+                'max:50000',
             ],
         ];
     }

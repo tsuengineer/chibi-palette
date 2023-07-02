@@ -88,8 +88,8 @@ class PostController extends Controller
 
     public function upload(PostStoreRequest $request): RedirectResponse
     {
-        // 投稿数が100件を超えている場合、エラーを返す
-        if (Auth::user()->posts()->count() >= 100) {
+        // 投稿数が300件を超えている場合、エラーを返す
+        if (Auth::user()->posts()->count() >= 300) {
             return redirect()->route('posts.upload');
         }
 
